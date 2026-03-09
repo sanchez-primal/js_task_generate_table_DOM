@@ -357,7 +357,7 @@ const people = [
 const tableBody = document.querySelector('table.dashboard > tbody');
 
 people.forEach(({ name: personName, sex, born, died, slug }) => {
-  const nameCell = `<th scope="row">${personName}</th>`;
+  const nameCell = createTdHTMLString(personName);
   const genderCell = createTdHTMLString(
     sex === 'm' ? 'Male' : sex === 'f' ? 'Female' : 'Unknown',
   );
